@@ -52,6 +52,7 @@ public class TrainSystemTest {
 
 	@Test
 	public void LaborIssueTest(){
-		Assert.assertEquals(5, user.LaborIssue());
+		TrainUserImpl user2 = new TrainUserImpl(controller);
+		Assert.assertEquals(5, user2.LaborIssue());
 	}
 }
