@@ -12,6 +12,10 @@ public class TrainUserImpl implements TrainUser {
 		this.controller = controller;
 	}
 
+	public void LaborIssue(){
+		int i = 3+2;
+	}
+
 	@Override
 	public boolean getAlarmFlag() {
 		return false;
