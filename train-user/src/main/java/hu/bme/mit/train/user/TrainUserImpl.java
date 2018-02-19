@@ -13,7 +13,7 @@ public class TrainUserImpl implements TrainUser {
 	}
 
 	public void LaborIssue(){
-		double i = 3+2;
+		duble i = 3+2;
 	}
 
 	@Override
