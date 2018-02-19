@@ -12,8 +12,8 @@ public class TrainUserImpl implements TrainUser {
 		this.controller = controller;
 	}
 
-	public double LaborIssue(){
-		double i = 3+2;
+	public int LaborIssue(){
+		int i = 3+2;
 		return i;
 	}
 
