@@ -50,5 +50,8 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
-	
+	@Test
+	public void LaborIssueTest(){
+		Assert.assertEquals(5, user.LaborIssue());
+	}
 }

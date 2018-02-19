@@ -12,8 +12,9 @@ public class TrainUserImpl implements TrainUser {
 		this.controller = controller;
 	}
 
-	public void LaborIssue(){
-		duble i = 3+2;
+	public double LaborIssue(){
+		double i = 3+2;
+		return i;
 	}
 
 	@Override
