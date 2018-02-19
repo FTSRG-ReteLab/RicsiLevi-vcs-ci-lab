@@ -6,14 +6,16 @@ import org.junit.Test;
 import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
-
+	Tachograph t1;
+	
     @Before
     public void before() {
-        // TODO Add initializations
+        t1 = new Tachograph();
+        t1.put(0, 50, 10);
     }
 
     @Test
-    public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+    public void TachographTest() {
+        Assert.assertEquals(10, t1.getSpeed(0, 50));
     }
 }
