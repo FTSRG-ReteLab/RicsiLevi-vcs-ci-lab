@@ -3,5 +3,11 @@ subprojects {
 
   repositories {
     jcenter()
+    mavenCentral()
+  }
+
+  dependencies {
+    compile 'com.google.guava:guava-gwt:24.0-jre'
+    
   }
 }
