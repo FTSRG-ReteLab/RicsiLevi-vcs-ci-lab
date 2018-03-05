@@ -34,4 +34,27 @@ public class TrainSensorTest {
     	uut.overrideSpeedLimit(-5);
     	verify(mockedUser, times(1)).setAlarmState(true);
     }
+    
+    @Test
+    public void overrideSpeedLimit_moreThan500_setAlarm(){
+    	when(mockedController.getReferenceSpeed()).thenReturn(50);
+    	uut.overrideSpeedLimit(501);
+    	verify(mockedUser, times(1)).setAlarmState(true);
+    }
+    
+    @Test
+    public void overrideSpeedLimit_correct_dontSetAlarm(){
+    	when(mockedController.getReferenceSpeed()).thenReturn(50);
+    	uut.overrideSpeedLimit(120);
+    	verify(mockedUser, never()).setAlarmState(true);
+    }
+    
+    @Test
+    public void overrideSpeedLimit_relativeError_SetAlarm(){
+    	when(mockedController.getReferenceSpeed()).thenReturn(50);
+    	uut.overrideSpeedLimit(30);
+    	verify(mockedUser, times(1)).setAlarmState(true);
+    }
+    
+
 }
