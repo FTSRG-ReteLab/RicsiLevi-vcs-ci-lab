@@ -43,6 +43,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
+		//todo this fckin ashihitzjnjs
 		this.step = joystickPosition;		
 	}
 
