@@ -3,6 +3,8 @@ package hu.bme.mit.train.sensor;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+
 import static org.mockito.Mockito.*;
 import hu.bme.mit.train.user.*;
 import hu.bme.mit.train.interfaces.*;
@@ -54,6 +56,15 @@ public class TrainSensorTest {
     	when(mockedController.getReferenceSpeed()).thenReturn(50);
     	uut.overrideSpeedLimit(30);
     	verify(mockedUser, times(1)).setAlarmState(true);
+    }
+    
+    @Test
+    public void getSpeedLimit_Test(){
+    	
+    	
+    	uut.overrideSpeedLimit(120);
+    	
+    	Assert.assertEquals(120,uut.getSpeedLimit());
     }
     
 
